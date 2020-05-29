@@ -62,7 +62,8 @@ def analyze():
             <br>
             <a href="https://www.google.com/search?q=plain+concrete&tbm=isch&ved=2ahUKEwiYq4Tf2szpAhVYt6QKHXWmAScQ2-cCegQIABAA&oq=plain+concrete&gs_lcp=CgNpbWcQAzIECCMQJzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQEzIECAAQE1CnOVipOmDMO2gAcAB4AIABXIgBtgGSAQEymAEAoAEBqgELZ3dzLXdpei1pbWc&sclient=img&ei=eYTKXtiKB9jukgX1zIa4Ag&bih=1054&biw=2064", target = "_blank">search for plain concrete images</a>
             <br>
-            <br>            
+            <br> 
+            <br>           
             <iframe src="https://youtube.com/embed/NafEYsmeBGU" width="853" height="480" frameborder="0" allowfullscreen></iframe>
             ''')
             
