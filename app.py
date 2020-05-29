@@ -21,7 +21,7 @@ def load():
     global services 
     services = dict()
     
-    services['model'] = tf.keras.models.load_model('resnet_trained.h5')
+    services['model'] = tf.keras.models.load_model('./resnet_trained.h5')
     
     
     #services['graph'] = tf.compat.v1.get_default_graph()
