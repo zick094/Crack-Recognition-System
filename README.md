@@ -16,7 +16,7 @@ For deploying a web-application on Heroku (and on others PaaS providers), some s
 ## 4. Tutorial for use
 For using the web-app, you need to go to the following link, search for a concrete image, paste the link in the search bar and it give you an answer on if there is or not a crack in the pic you gave. At the moment is only possible use online picture, but I'm working on using also loading local pictures.
 
-I provide you a youtube video where I recorder the procedure.
+I provide you a youtube video where I recorder the procedure..
 
 <p align="center">
 
