@@ -55,7 +55,7 @@ def analyze():
 
         if not URL:
             if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)+str(uniform(0,1000000))
+                filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 img = Image.open(file)
                 services['to_print'] = url_for('uploaded_file',filename=filename)
@@ -100,8 +100,10 @@ def main():
     load()
     #this for local debugging
     app.run(debug=True)
-    #port = int(os.environ.get('PORT', 5000))
-    #app.run(host='0.0.0.0', port=port)
+    
+    #this for remote working
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
 
 if __name__ == '__main__':
     main()
