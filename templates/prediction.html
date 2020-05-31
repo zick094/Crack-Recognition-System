@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<br>
+<h2>Result:</h2>
+<h3> {{prediction}} </h3>
+<br>
+<img src={{ img }} style="width:auto;height:300px;">
+<br>
+<br>
+<a class="btn btn-success" href="/tool" role="button">Go back</a>
+
+{% endblock %}
