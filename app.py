@@ -55,7 +55,8 @@ def analyze():
 
         if not URL:
             if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
+                token_pic = secrets.token_hex(5)
+                filename = str(token_pic) + str(secure_filename(file.filename))
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 img = Image.open(file)
                 services['to_print'] = url_for('uploaded_file',filename=filename)
