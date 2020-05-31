@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, session, send_from_directory, url_for
 import requests
-from random import uniform
+import secrets
 
 import tensorflow as tf
 import numpy as np
@@ -76,15 +76,17 @@ def analyze():
         # predict image
         global prediction_
         prediction_ = services['model'].predict(np.expand_dims(np.array(image_resized, dtype='float32'), axis=0))
+
+        # lets generate token for not overlapping users usage
             
-        
-        return redirect('/prediction')
+        token = secrets.token_hex(5)
+        return redirect(url_for('predict', token=token))
 
     else:
         return render_template('request.html')
             
-@app.route('/prediction', methods = ['GET','POST'])
-def predict():
+@app.route('/<token>/prediction', methods = ['GET','POST'])
+def predict(token):
     if request.method == 'POST':
         return redirect('/home')
     else:
@@ -99,11 +101,11 @@ def uploaded_file(filename):
 def main():
     load()
     #this for local debugging
-    #app.run(debug=True)
+    app.run(debug=True)
     
     #this for remote working
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    #port = int(os.environ.get('PORT', 5000))
+    #app.run(host='0.0.0.0', port=port)
 
 if __name__ == '__main__':
     main()
