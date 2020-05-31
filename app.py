@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, session, send_from_directory, url_for
 import requests
+from random import uniform
 
 import tensorflow as tf
 import numpy as np
@@ -54,7 +55,7 @@ def analyze():
 
         if not URL:
             if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
+                filename = secure_filename(file.filename)+str(uniform(0,1000000))
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 img = Image.open(file)
                 services['to_print'] = url_for('uploaded_file',filename=filename)
@@ -98,9 +99,9 @@ def uploaded_file(filename):
 def main():
     load()
     #this for local debugging
-    #app.run(debug=True)
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
+    #port = int(os.environ.get('PORT', 5000))
+    #app.run(host='0.0.0.0', port=port)
 
 if __name__ == '__main__':
     main()
