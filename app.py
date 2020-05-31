@@ -99,7 +99,7 @@ def uploaded_file(filename):
 def main():
     load()
     #this for local debugging
-    app.run(debug=True)
+    #app.run(debug=True)
     
     #this for remote working
     port = int(os.environ.get('PORT', 5000))
