@@ -18,12 +18,7 @@ For using the web-app, you need to go to the following link, search for a concre
 
 I provide you a youtube video where I recorder the procedure..
 
-<p align="center">
-
-[![](http://img.youtube.com/vi/NafEYsmeBGU/0.jpg)](http://www.youtube.com/watch?v=NafEYsmeBGU "")
-
-</p>
-
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/nXA1KXNK9DE/0.jpg)](http://www.youtube.com/watch?v=nXA1KXNK9DE "Concrete Crack Recognition")
 
 ## Thanks
 Thanks for visiting my repository. For any feedback you can contact me at luca.riccardi@live.it.
