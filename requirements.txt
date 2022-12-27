@@ -5,4 +5,4 @@ Pillow==9.0.0
 requests==2.22.0
 tensorflow==2.5.3
 tensorflow_estimator==2.0.1
-setuptools==41.0.0
+setuptools==65.5.1
